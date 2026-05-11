@@ -13,23 +13,23 @@
 5.0e-9
 
 #### BANDSTRUCTURE CONDITIONS
-## Number of band (valleys) (G, L, X):
+## Number of band (valleys) (G, L, X) -- keep at 3 for now!:
 3
 
-#### DEVICE ELECTRICAL CONDITIONS
+#### DEVICE ELECTRICAL CONDITIONS - note the barrier is often called "HB" in code (for heterobarrier).
 ## Doping density (n-type) (m^-3):
 1.0e24
 ## Right boundary position (left is fixed, at 1/2 of bin length to allow for contact treatment) (m):
 1997.5e-9
-## Heterobarrier (on or off - 1/0):
+## Barrier (on or off - 1/0) -- turning the barrier off (removing it) has not been tested!:
 1
-## Heterobarrier start position (m):
+## Barrier start position (m):
 960.0e-9
-## Heterobarrier end positon (m):
+## Barrier end positon (m):
 1040.0e-9
 ## Alloy concentration (bulk) (-):
 0.250
-## HB Height (eV):
+## Barrier Height (eV):
 0.090
 ## Conduction band offset ratio of total bandgap (-):
 0.60
