@@ -21,9 +21,6 @@ function main(ParPos, ParWvk, ParTau, ParValley, ParPhysValley, ParStat, LocNode
         if CountWrite == FreqWriteOut
             println("Time: ", time/1e-12, " ps")
             Totals, Dist = WriteToFileMain(Totals, OutFile, step, Mat, Dist, BinLen, BarHeight, LocNode)
-            if step > stepStatisticsBegin*2
-                TempProps(Mat, LocNode)
-            end
             CountWrite = 0
         end
 
