@@ -1,0 +1,37 @@
+#### CALCULATION CONDITIONS
+## Timestep (s):
+1.0e-15
+## Total simulation time (s):
+1.0e-9
+## i/o output frequency (number of timesteps):
+1200
+## Total number of particles:
+240000
+## Number of bins (spatial discretization for data):
+400
+## Bin length (m):
+5.0e-9
+
+#### BANDSTRUCTURE CONDITIONS
+## Number of band (valleys) (G, L, X):
+3
+
+#### DEVICE ELECTRICAL CONDITIONS
+## Doping density (n-type) (m^-3):
+1.0e24
+## Right boundary position (left is fixed, at 1/2 of bin length to allow for contact treatment) (m):
+1997.5e-9
+## Heterobarrier (on or off - 1/0):
+1
+## Heterobarrier start position (m):
+960.0e-9
+## Heterobarrier end positon (m):
+1040.0e-9
+## Alloy concentration (bulk) (-):
+0.250
+## HB Height (eV):
+0.090
+## Conduction band offset ratio of total bandgap (-):
+0.60
+## Applied voltage (V):
+0.080
