@@ -10,3 +10,5 @@ The simulation is initialized from MonteCarlo.jl, which calls the primary MC tem
 
 ## Usage
 A sample input file (INPUT.txt) has been included with a few customizable parameters. The program is run by executing _MonteCarlo.jl_ followed by a nescessary input file from the command line (not the Julia REPL).
+
+We plan to add more simulationd details for usability soon.
