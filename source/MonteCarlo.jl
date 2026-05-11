@@ -7,7 +7,6 @@ include("ParticleLoop.jl")
 include("ParticleDrift.jl")
 include("ParticleScatter.jl")
 include("PoissonSolver.jl")
-include("TempSolver.jl")
 include("Contacts.jl")
 
 # packages
