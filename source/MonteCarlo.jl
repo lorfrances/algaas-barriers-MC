@@ -64,7 +64,7 @@ const NumOhmic = 2
 const TBR = 2.0e-9
 const ApplVoltage = InputData[16]
 const E_min = 1e-4 # small energy for handling edge cases (eV)
-const RefBinNum = RefBinNum = div(NumPar,NumBin) #integer
+const RefBinNum = div(NumPar,NumBin) #integer
 const ParCharge = DopDens_n*NodeLen/RefBinNum # sheet charge density reperesented by one elctron (electrons/m^2)
 
 # read scattering parameters###
