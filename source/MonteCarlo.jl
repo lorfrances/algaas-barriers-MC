@@ -14,7 +14,6 @@ using LinearAlgebra
 using DelimitedFiles
 using Statistics
 using Printf
-using Base.Threads
 
 # global physical Constants
 const kB =  1.380649e-23
