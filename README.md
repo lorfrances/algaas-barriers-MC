@@ -3,6 +3,7 @@ This Julia source code was developed for the ensemble Monte Carlo (MC) Boltzmann
 
 Franceschetti, L., Shin, S., and Kaviany, M., “Phonon valleytronics: Enhanced phonon absoprtion by electron valley-energy filtering,” under review.
 
+The program was executed on HPC using **Julia 1.5.2** on the Bridges2 supercomputer.
 ## Structure
 The simulation is initialized from MonteCarlo.jl, which calls the primary MC temporal loop (executes one timestep). Within that timestep, every particle is drifted and potentially scattered. At the end of the timestep, particles are injected from the contacts when nescessary. The Poisson equation is then evaluated, and data is collected. This continues until the end of the simulation with a specified duration. The detailed algorthim, which follows a rather standard MC for ensemble electron transport, is illustrated in the flowchart below.
 
