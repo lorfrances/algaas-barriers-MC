@@ -1,7 +1,7 @@
 # AlGaAs barriers: electron Monte Carlo simulation
 This Julia source code was developed for the ensemble Monte Carlo (MC) Boltzmann transport simulation of electrons in an AlGaAs solid-state thermionic device. Unique features include a three-valley model with nonparabolic, ellipsoidal, anisotropic electron valleys, rigorous treatment of lateral momentum conservation, and detailed tracking of phonon features. The material parameters can be modified, but for now, not in the input file; they are found in the initialization file (Initialize.jl). Results generated from this simulation have been included in the following article:
 
-Franceschetti, L., Shin, S., and Kaviany, M., “Phonon valleytronics: Enhanced phonon absoprtion by electron valley-energy filtering,” under review.
+Franceschetti, L., Shin, S., and Kaviany, M., “Phonon valleytronics: Enhanced phonon absoprtion by electron valley-energy filtering,” _Phys. Rev. B_, 113, 235302, 2026.
 
 The program was executed on HPC using **Julia 1.5.2** on the Bridges2 supercomputer.
 ## Structure
