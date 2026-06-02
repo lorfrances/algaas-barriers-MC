@@ -77,7 +77,7 @@ end
 Mat, LocNode, BinLen, BarHeight, ScattTable, MaxRate, ScattCount, ScattIndex, Elip, Contact = InitializeMaterial()
 println("Maximum rate: ", MaxRate)
 const Nc = 2*((kB*T_pConst*Mat.m_ee[1,1]*m0*2*pi)/(hbar*2*pi)^2)^1.5
-const FermiEnergy = (kB*T_pConst/e_c)*log(DopDens_n/Nc)
+const FermiEnergy = (kB*T_pConst/e_c)*log(DopDens_n/Nc) # Note: not used
 writedlm("ScattTable_G.dat",ScattTable.G[1,:,:])
 writedlm("ScattTable_L.dat",ScattTable.L[1,:,:])
 writedlm("ScattTable_X.dat",ScattTable.X[1,:,:])
