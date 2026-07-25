@@ -132,12 +132,15 @@ function WriteToFileMain(Totals, OutFile, step, Mat, Dist, BinLen, BarHeight, Lo
     GNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[2,:] - Dist.ScattCountBin[1,:]).*e_c.*Mat.EpO)./(WriteOutTime)
     GLNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[7,:] - Dist.ScattCountBin[6,:]).*e_c.*Mat.EpIV[1,:])./(WriteOutTime)
     GXNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[9,:] - Dist.ScattCountBin[8,:]).*e_c.*Mat.EpIV[2,:])./(WriteOutTime)
-    LGNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[14,:] - Dist.ScattCountBin[13,:]).*e_c.*Mat.EpIV[1,:])./(WriteOutTime)
-    LXNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[16,:] - Dist.ScattCountBin[15,:]).*e_c.*Mat.EpIV[3,:])./(WriteOutTime)
-    LLNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[18,:] - Dist.ScattCountBin[17,:]).*e_c.*Mat.EpIV[4,:])./(WriteOutTime)
-    XGNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[23,:] - Dist.ScattCountBin[22,:]).*e_c.*Mat.EpIV[2,:])./(WriteOutTime)
-    XLNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[25,:] - Dist.ScattCountBin[24,:]).*e_c.*Mat.EpIV[3,:])./(WriteOutTime)
-    XXNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[27,:] - Dist.ScattCountBin[26,:]).*e_c.*Mat.EpIV[5,:])./(WriteOutTime)
+    LNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[11,:] - Dist.ScattCountBin[10,:]).*e_c.*Mat.EpO)./(WriteOutTime)
+    LGNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[16,:] - Dist.ScattCountBin[15,:]).*e_c.*Mat.EpIV[1,:])./(WriteOutTime)
+    LXNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[18,:] - Dist.ScattCountBin[17,:]).*e_c.*Mat.EpIV[3,:])./(WriteOutTime)
+    LLNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[20,:] - Dist.ScattCountBin[19,:]).*e_c.*Mat.EpIV[4,:])./(WriteOutTime)
+    XNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[22,:] - Dist.ScattCountBin[21,:]).*e_c.*Mat.EpO)./(WriteOutTime)
+    XGNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[27,:] - Dist.ScattCountBin[26,:]).*e_c.*Mat.EpIV[2,:])./(WriteOutTime)
+    XLNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[29,:] - Dist.ScattCountBin[28,:]).*e_c.*Mat.EpIV[3,:])./(WriteOutTime)
+    XXNetPhononEmissionBin = ((ParCharge./BinLen).*(Dist.ScattCountBin[31,:] - Dist.ScattCountBin[30,:]).*e_c.*Mat.EpIV[5,:])./(WriteOutTime)
+
     GLAbsorbTot = ((ParCharge./BinLen).*Dist.ScattCountBin[6,:].*e_c.*Mat.EpIV[1,:])./(WriteOutTime)
     GLEmitTot = ((ParCharge./BinLen).*Dist.ScattCountBin[7,:].*e_c.*Mat.EpIV[1,:])./(WriteOutTime)
     LGAbsorbTot  = ((ParCharge./BinLen).*Dist.ScattCountBin[13,:].*e_c.*Mat.EpIV[1,:])./(WriteOutTime)
@@ -207,6 +210,12 @@ function WriteToFileMain(Totals, OutFile, step, Mat, Dist, BinLen, BarHeight, Lo
     end
     open(OutFile.XXPhononCountData,"a") do io
         writedlm(io, (XXNetPhononEmissionBin)', ' ')
+    end
+    open(OutFile.LPhononCountData,"a") do io
+        writedlm(io, (LNetPhononEmissionBin)', ' ')
+    end
+    open(OutFile.XPhononCountData,"a") do io
+        writedlm(io, (XNetPhononEmissionBin)', ' ')
     end
     open(OutFile.GLTotAbsorbData,"a") do io
         writedlm(io, (GLAbsorbTot)', ' ')
